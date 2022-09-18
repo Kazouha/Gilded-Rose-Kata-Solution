@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26a37296-12f3-4cbd-a317-fd13ab8044ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/items/Normal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/ItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/items/Brie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/ItemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +73,7 @@
       <recent name="com.gildedrose" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GildedRoseTest">
+  <component name="RunManager" selected="Gradle.ItemTest">
     <configuration name="GildedRoseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -147,7 +143,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GildedRoseTest.test_9" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ItemTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,7 +156,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.gildedrose.GildedRoseTest.test_9&quot;" />
+            <option value="&quot;com.gildedrose.ItemTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -195,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GildedRoseTest" />
+        <item itemvalue="Gradle.ItemTest" />
         <item itemvalue="Gradle.NormalTest" />
+        <item itemvalue="Gradle.GildedRoseTest" />
         <item itemvalue="Gradle.GildedRoseTest.test_7" />
         <item itemvalue="Gradle.GildedRoseTest.test_10" />
-        <item itemvalue="Gradle.GildedRoseTest.test_9" />
       </list>
     </recent_temporary>
   </component>
@@ -290,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663507682100</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="implement class for normal items">
+      <created>1663513080464</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663513080464</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +334,7 @@
     <MESSAGE value="change quality cannot rise above 50 test to also include backstage passes" />
     <MESSAGE value="implement increaseQuality() method" />
     <MESSAGE value="change items to List instead of Array and update tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="change items to List instead of Array and update tests" />
+    <MESSAGE value="implement class for normal items" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement class for normal items" />
   </component>
 </project>

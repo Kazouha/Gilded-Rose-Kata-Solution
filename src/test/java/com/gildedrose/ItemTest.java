@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import com.gildedrose.items.Brie;
 import com.gildedrose.items.Item;
 import com.gildedrose.items.Normal;
 import org.junit.jupiter.api.DisplayName;
@@ -50,6 +51,35 @@ class ItemTest {
 
             // Assert
             assertThat(normal.getQuality()).isZero();
+        }
+    }
+
+    @Nested
+    class BrieTest {
+        @Test
+        @DisplayName("Quality of Aged Brie increses the older it gets")
+        void test_1() {
+            // Arrange
+            Item brie = new Brie("Aged Brie", 10, 10);
+
+            // Act
+            brie.update();
+
+            // Assert
+            assertThat(brie.getQuality()).isEqualTo(11);
+        }
+
+        @Test
+        @DisplayName("Quality cannot be over 50")
+        void test_2() {
+            // Arrange
+            Item brie = new Brie("Aged Brie", 10, 50);
+
+            // Act
+            brie.update();
+
+            // Assert
+            assertThat(brie.getQuality()).isEqualTo(50);
         }
     }
 
