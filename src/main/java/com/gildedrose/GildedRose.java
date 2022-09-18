@@ -12,7 +12,7 @@ public class GildedRose {
             if (!isAgedBree(item)
                     && !isBackstagePass(item)) {
                 if (item.quality > 0) {
-                    if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
+                    if (!isSulfuras(item)) {
                         item.quality = item.quality - 1;
                     }
                 }
@@ -36,7 +36,7 @@ public class GildedRose {
                 }
             }
 
-            if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
+            if (!isSulfuras(item)) {
                 item.sellIn = item.sellIn - 1;
             }
 
@@ -44,7 +44,7 @@ public class GildedRose {
                 if (!isAgedBree(item)) {
                     if (!isBackstagePass(item)) {
                         if (item.quality > 0) {
-                            if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
+                            if (!isSulfuras(item)) {
                                 item.quality = item.quality - 1;
                             }
                         }
@@ -66,5 +66,9 @@ public class GildedRose {
 
     private static boolean isBackstagePass(Item item) {
         return (item.name.contains("Backstage pass"));
+    }
+
+    private static boolean isSulfuras(Item item) {
+        return (item.name.equals("Sulfuras, Hand of Ragnaros"));
     }
 }

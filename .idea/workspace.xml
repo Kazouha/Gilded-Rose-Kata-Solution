@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="26a37296-12f3-4cbd-a317-fd13ab8044ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +200,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663495001681</updated>
-      <workItem from="1663495005164" duration="4508000" />
+      <workItem from="1663495005164" duration="4840000" />
     </task>
     <task id="LOCAL-00001" summary="build project">
       <created>1663495797404</created>
@@ -238,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663499125778</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implement isBackstagePass() method to reduce duplicate code">
+      <created>1663499549413</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663499549413</updated>
+    </task>
+    <task id="LOCAL-00007" summary="implement missing test to check if SellIn value of Sulfaras never changes">
+      <created>1663499582317</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663499582317</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +274,8 @@
     <MESSAGE value="write tests for Gilded Rose requirements" />
     <MESSAGE value="change for-loop to forEach loop in updateQuality()" />
     <MESSAGE value="implement isAgedBrie() method to reduce duplicate code" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement isAgedBrie() method to reduce duplicate code" />
+    <MESSAGE value="implement isBackstagePass() method to reduce duplicate code" />
+    <MESSAGE value="implement missing test to check if SellIn value of Sulfuras never changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement missing test to check if SellIn value of Sulfuras never changes" />
   </component>
 </project>
