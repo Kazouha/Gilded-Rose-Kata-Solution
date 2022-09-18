@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26a37296-12f3-4cbd-a317-fd13ab8044ec" name="Changes" comment="implement isSulfuras() method to reduce duplicate code">
+    <list default="true" id="26a37296-12f3-4cbd-a317-fd13ab8044ec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663499582317</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="combine some if-statements">
+      <created>1663501781969</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663501781969</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +285,7 @@
     <MESSAGE value="implement isAgedBrie() method to reduce duplicate code" />
     <MESSAGE value="implement isBackstagePass() method to reduce duplicate code" />
     <MESSAGE value="implement missing test to check if SellIn value of Sulfuras never changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement missing test to check if SellIn value of Sulfuras never changes" />
+    <MESSAGE value="combine some if-statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="combine some if-statements" />
   </component>
 </project>

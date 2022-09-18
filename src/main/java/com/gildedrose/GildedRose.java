@@ -15,19 +15,7 @@ public class GildedRose {
                     item.quality = item.quality - 1;
                 }
             } else {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-
-                    if (isBackstagePass(item)) {
-                        if (item.sellIn < 11 && item.quality < 50) {
-                            item.quality = item.quality + 1;
-                        }
-
-                        if (item.sellIn < 6 && item.quality < 50) {
-                            item.quality = item.quality + 1;
-                        }
-                    }
-                }
+                increaseQuality(item);
             }
 
             if (!isSulfuras(item)) {
@@ -63,4 +51,21 @@ public class GildedRose {
     private static boolean isSulfuras(Item item) {
         return (item.name.equals("Sulfuras, Hand of Ragnaros"));
     }
+
+    private static void increaseQuality(Item item) {
+        if (item.quality < 50) {
+            item.quality++;
+
+            if (isBackstagePass(item) && item.sellIn > 0) {
+                if (item.sellIn < 11 && item.quality < 50) {
+                    item.quality++;
+                }
+
+                if (item.sellIn < 6 && item.quality < 50) {
+                    item.quality++;
+                }
+            }
+        }
+    }
+
 }
