@@ -1,5 +1,7 @@
 package com.gildedrose;
 
+import com.gildedrose.items.Item;
+
 import java.util.List;
 
 public class GildedRose {
@@ -19,14 +21,14 @@ public class GildedRose {
             if (!isAgedBree(item)
                     && !isBackstagePass(item)) {
                 decreaseQuality(item);
-            } else if (isBackstagePass(item) && item.sellIn <= 0) {
+            } else if (isBackstagePass(item) && item.getDaysToSell() <= 0) {
                 decreaseQuality(item);
             }
             else {
                 increaseQuality(item);
             }
 
-            item.sellIn = item.sellIn - 1;
+            item.daysToSell = item.daysToSell - 1;
         }
     }
 
@@ -46,12 +48,12 @@ public class GildedRose {
         if (item.quality < 50) {
             item.quality++;
 
-            if (isBackstagePass(item) && item.sellIn > 0) {
-                if (item.sellIn < 11 && item.quality < 50) {
+            if (isBackstagePass(item) && item.daysToSell > 0) {
+                if (item.daysToSell < 11 && item.quality < 50) {
                     item.quality++;
                 }
 
-                if (item.sellIn < 6 && item.quality < 50) {
+                if (item.daysToSell < 6 && item.quality < 50) {
                     item.quality++;
                 }
             }
@@ -61,7 +63,7 @@ public class GildedRose {
     private static void decreaseQuality(Item item) {
         if (!isSulfuras(item) && item.quality > 0) {
             item.quality--;
-            if (item.sellIn <= 0 && item.quality > 0) {
+            if (item.daysToSell <= 0 && item.quality > 0) {
                 item.quality--;
                 if (isBackstagePass(item)) {
                     item.quality = 0;

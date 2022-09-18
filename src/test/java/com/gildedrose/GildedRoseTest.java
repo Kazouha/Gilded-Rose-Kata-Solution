@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import com.gildedrose.items.Item;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +21,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).name).isEqualTo("foo");
+        assertThat(app.items.get(0).getName()).isEqualTo("foo");
     }
 
     @Test
@@ -34,8 +35,8 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).sellIn).isEqualTo(2);
-        assertThat(app.items.get(0).quality).isEqualTo(2);
+        assertThat(app.items.get(0).getDaysToSell()).isEqualTo(2);
+        assertThat(app.items.get(0).getQuality()).isEqualTo(2);
     }
     @Test
     @DisplayName("Normal item's quality degrades by 2 each day after sellIn date is passed")
@@ -48,7 +49,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).quality).isEqualTo(8);
+        assertThat(app.items.get(0).getQuality()).isEqualTo(8);
     }
 
     @Test
@@ -62,7 +63,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).quality).isZero();
+        assertThat(app.items.get(0).getQuality()).isZero();
     }
 
     @Test
@@ -76,7 +77,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).quality).isGreaterThan(20);
+        assertThat(app.items.get(0).getQuality()).isGreaterThan(20);
     }
 
     @Test
@@ -93,9 +94,9 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).quality).isEqualTo(50);
-        assertThat(app.items.get(1).quality).isEqualTo(50);
-        assertThat(app.items.get(2).quality).isEqualTo(50);
+        assertThat(app.items.get(0).getQuality()).isEqualTo(50);
+        assertThat(app.items.get(1).getQuality()).isEqualTo(50);
+        assertThat(app.items.get(2).getQuality()).isEqualTo(50);
     }
 
     @Test
@@ -109,7 +110,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).quality).isEqualTo(80);
+        assertThat(app.items.get(0).getQuality()).isEqualTo(80);
     }
 
     @Test
@@ -123,7 +124,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).sellIn).isEqualTo(3);
+        assertThat(app.items.get(0).getDaysToSell()).isEqualTo(3);
     }
 
     @Test
@@ -137,7 +138,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).quality).isEqualTo(22);
+        assertThat(app.items.get(0).getQuality()).isEqualTo(22);
     }
 
     @Test
@@ -151,7 +152,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).quality).isEqualTo(23);
+        assertThat(app.items.get(0).getQuality()).isEqualTo(23);
     }
 
     @Test
@@ -165,7 +166,7 @@ class GildedRoseTest {
         app.updateQuality();
 
         // Assert
-        assertThat(app.items.get(0).quality).isZero();
+        assertThat(app.items.get(0).getQuality()).isZero();
     }
 
 
