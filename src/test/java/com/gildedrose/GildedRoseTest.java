@@ -56,7 +56,10 @@ class GildedRoseTest {
     @DisplayName("Quality cannot be negative")
     void  test_4() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Normal("foo", 0, 0)));
+        List<Item> items = new ArrayList<>(List.of(
+                new Normal("foo", 0, 0),
+                new Conjured("Conjured Item", 5, 1),
+                new Conjured("Conjured Item", 0 , 0)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -64,6 +67,8 @@ class GildedRoseTest {
 
         // Assert
         assertThat(app.items.get(0).getQuality()).isZero();
+        assertThat(app.items.get(1).getQuality()).isZero();
+        assertThat(app.items.get(2).getQuality()).isZero();
     }
 
     @Test
@@ -169,5 +174,21 @@ class GildedRoseTest {
         assertThat(app.items.get(0).getQuality()).isZero();
     }
 
+    @Test
+    @DisplayName("Quality of Conjured items decreases twice as fast as normal items")
+    void test_12() {
+        // Arrange
+        List<Item> items = new ArrayList<>(List.of(
+                new Conjured("Conjured Item", 5, 30),
+                new Conjured("Conjured Item", 0 , 30)));
+        GildedRose app = new GildedRose(items);
+
+        // Act
+        app.updateQuality();
+
+        // Assert
+        assertThat(app.items.get(0).getQuality()).isEqualTo(28);
+        assertThat(app.items.get(1).getQuality()).isEqualTo(26);
+    }
 
 }
