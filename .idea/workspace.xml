@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26a37296-12f3-4cbd-a317-fd13ab8044ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/items/Brie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/items/BackstagePass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/ItemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +75,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.ItemTest">
-    <configuration name="GildedRoseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BackstagePassTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -87,7 +88,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.gildedrose.GildedRoseTest&quot;" />
+            <option value="&quot;com.gildedrose.ItemTest$BackstagePassTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -97,7 +98,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GildedRoseTest.test_10" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BackstagePassTest.test_2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -110,7 +111,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.gildedrose.GildedRoseTest.test_10&quot;" />
+            <option value="&quot;com.gildedrose.ItemTest$BackstagePassTest.test_2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -120,7 +121,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GildedRoseTest.test_7" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BackstagePassTest.test_3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -133,7 +134,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.gildedrose.GildedRoseTest.test_7&quot;" />
+            <option value="&quot;com.gildedrose.ItemTest$BackstagePassTest.test_3&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BackstagePassTest.test_4" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.gildedrose.ItemTest$BackstagePassTest.test_4&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -166,36 +190,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="NormalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.gildedrose.ItemTest$NormalTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ItemTest" />
-        <item itemvalue="Gradle.NormalTest" />
-        <item itemvalue="Gradle.GildedRoseTest" />
-        <item itemvalue="Gradle.GildedRoseTest.test_7" />
-        <item itemvalue="Gradle.GildedRoseTest.test_10" />
+        <item itemvalue="Gradle.BackstagePassTest" />
+        <item itemvalue="Gradle.BackstagePassTest.test_4" />
+        <item itemvalue="Gradle.BackstagePassTest.test_3" />
+        <item itemvalue="Gradle.BackstagePassTest.test_2" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663513080464</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="implement class for aged brie">
+      <created>1663513557525</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663513557525</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +343,7 @@
     <MESSAGE value="implement increaseQuality() method" />
     <MESSAGE value="change items to List instead of Array and update tests" />
     <MESSAGE value="implement class for normal items" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement class for normal items" />
+    <MESSAGE value="implement class for aged brie" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement class for aged brie" />
   </component>
 </project>
