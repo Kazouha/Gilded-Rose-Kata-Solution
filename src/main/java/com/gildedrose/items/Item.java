@@ -1,13 +1,13 @@
 package com.gildedrose.items;
 
-public class Item {
-    public final String name;
+public abstract class Item {
+    private final String name;
 
-    public int daysToSell;
+    protected int daysToSell;
 
-    public int quality;
+    protected int quality;
 
-    public Item(String name, int daysToSell, int quality) {
+    protected Item(String name, int daysToSell, int quality) {
         this.name = name;
         this.daysToSell = daysToSell;
         this.quality = quality;
@@ -30,7 +30,5 @@ public class Item {
         return daysToSell;
     }
 
-    public void update() {
-
-    }
+    public abstract void update();
 }

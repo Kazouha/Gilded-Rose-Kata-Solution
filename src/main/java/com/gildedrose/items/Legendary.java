@@ -7,4 +7,8 @@ public class Legendary extends Item {
         this.quality = 80;
     }
 
+    @Override
+    public void update() {
+        // Method should do nothing, because values of legendary items do not change
+    }
 }
