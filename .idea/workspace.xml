@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26a37296-12f3-4cbd-a317-fd13ab8044ec" name="Changes" comment="">
+    <list default="true" id="26a37296-12f3-4cbd-a317-fd13ab8044ec" name="Changes" comment="implement increaseQuality() method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gildedrose/GildedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gildedrose/GildedRoseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +260,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663501781969</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change quality cannot rise above 50 test to also include backstage passes">
+      <created>1663502885817</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663502885817</updated>
+    </task>
+    <task id="LOCAL-00010" summary="implement increaseQuality() method">
+      <created>1663503144616</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663503144616</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +300,8 @@
     <MESSAGE value="implement isBackstagePass() method to reduce duplicate code" />
     <MESSAGE value="implement missing test to check if SellIn value of Sulfuras never changes" />
     <MESSAGE value="combine some if-statements" />
-    <option name="LAST_COMMIT_MESSAGE" value="combine some if-statements" />
+    <MESSAGE value="change quality cannot rise above 50 test to also include backstage passes" />
+    <MESSAGE value="implement increaseQuality() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement increaseQuality() method" />
   </component>
 </project>

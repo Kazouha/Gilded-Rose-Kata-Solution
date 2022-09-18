@@ -9,34 +9,22 @@ public class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
+            if (isSulfuras(item)) {
+                item.quality = 80;
+                continue;
+            }
+
             if (!isAgedBree(item)
                     && !isBackstagePass(item)) {
-                if (item.quality > 0 && !isSulfuras(item)) {
-                    item.quality = item.quality - 1;
-                }
-            } else {
+                decreaseQuality(item);
+            } else if (isBackstagePass(item) && item.sellIn <= 0) {
+                decreaseQuality(item);
+            }
+            else {
                 increaseQuality(item);
             }
 
-            if (!isSulfuras(item)) {
-                item.sellIn = item.sellIn - 1;
-            }
-
-            if (item.sellIn < 0) {
-                if (!isAgedBree(item)) {
-                    if (!isBackstagePass(item)) {
-                        if (item.quality > 0 && !isSulfuras(item)) {
-                            item.quality = item.quality - 1;
-                        }
-                    } else {
-                        item.quality = 0;
-                    }
-                } else {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-                    }
-                }
-            }
+            item.sellIn = item.sellIn - 1;
         }
     }
 
@@ -68,4 +56,15 @@ public class GildedRose {
         }
     }
 
+    private static void decreaseQuality(Item item) {
+        if (!isSulfuras(item) && item.quality > 0) {
+            item.quality--;
+            if (item.sellIn <= 0 && item.quality > 0) {
+                item.quality--;
+                if (isBackstagePass(item)) {
+                    item.quality = 0;
+                }
+            }
+        }
+    }
 }
