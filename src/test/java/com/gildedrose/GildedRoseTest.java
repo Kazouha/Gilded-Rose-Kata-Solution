@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.items.Item;
+import com.gildedrose.items.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,7 @@ class GildedRoseTest {
     @DisplayName("First item's name is foo")
     void test_1() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("foo", 0, 0)));
+        List<Item> items = new ArrayList<>(List.of(new Normal("foo", 0, 0)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -28,7 +28,7 @@ class GildedRoseTest {
     @DisplayName("Normal item's quality degrades by 1 each day")
     void test_2() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("foo", 3, 3)));
+        List<Item> items = new ArrayList<>(List.of(new Normal("foo", 3, 3)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -42,7 +42,7 @@ class GildedRoseTest {
     @DisplayName("Normal item's quality degrades by 2 each day after sellIn date is passed")
     void test_3() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("foo", 0, 10)));
+        List<Item> items = new ArrayList<>(List.of(new Normal("foo", 0, 10)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -56,7 +56,7 @@ class GildedRoseTest {
     @DisplayName("Quality cannot be negative")
     void  test_4() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("foo", 0, 0)));
+        List<Item> items = new ArrayList<>(List.of(new Normal("foo", 0, 0)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -70,7 +70,7 @@ class GildedRoseTest {
     @DisplayName("Quality of Aged Brie increses the older it gets")
     void test_5() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("Aged Brie", 10, 20)));
+        List<Item> items = new ArrayList<>(List.of(new Brie("Aged Brie", 10, 20)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -85,9 +85,9 @@ class GildedRoseTest {
     void test_6() {
         // Arrange
         List<Item> items = new ArrayList<>(List.of(
-                new Item("Aged Brie", 10, 50),
-                new Item("Backstage pass", 10, 50),
-                new Item("Backstage pass", 5, 50)));
+                new Brie("Aged Brie", 10, 50),
+                new BackstagePass("Backstage pass", 10, 50),
+                new BackstagePass("Backstage pass", 5, 50)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -103,7 +103,7 @@ class GildedRoseTest {
     @DisplayName("Quality of Sulfuras never changes")
     void test_7() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("Sulfuras, Hand of Ragnaros", 3, 80)));
+        List<Item> items = new ArrayList<>(List.of(new Legendary("Sulfuras, Hand of Ragnaros", 3, 80)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -117,7 +117,7 @@ class GildedRoseTest {
     @DisplayName("SellIn value of Sulfaras never changes")
     void test_8() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("Sulfuras, Hand of Ragnaros", 3, 80)));
+        List<Item> items = new ArrayList<>(List.of(new Legendary("Sulfuras, Hand of Ragnaros", 3, 80)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -131,7 +131,7 @@ class GildedRoseTest {
     @DisplayName("Quality of Backstage Passes increases by 2 if SellIn value is 10 or less")
     void test_9() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("Backstage pass", 10, 20)));
+        List<Item> items = new ArrayList<>(List.of(new BackstagePass("Backstage pass", 10, 20)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -145,7 +145,7 @@ class GildedRoseTest {
     @DisplayName("Quality of Backstage Passes increases by 3 if SellIn value is 5 or less")
     void test_10() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("Backstage pass", 5, 20)));
+        List<Item> items = new ArrayList<>(List.of(new BackstagePass("Backstage pass", 5, 20)));
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -159,7 +159,7 @@ class GildedRoseTest {
     @DisplayName("Quality of Backstage Passes drops to 0 after SellIn value is passed")
     void test_11() {
         // Arrange
-        List<Item> items = new ArrayList<>(List.of(new Item("Backstage pass", 0, 20)));
+        List<Item> items = new ArrayList<>(List.of(new BackstagePass("Backstage pass", 0, 20)));
         GildedRose app = new GildedRose(items);
 
         // Act
