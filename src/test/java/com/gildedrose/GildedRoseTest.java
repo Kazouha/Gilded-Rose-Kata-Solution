@@ -80,7 +80,11 @@ class GildedRoseTest {
     @DisplayName("Quality cannot rise above 50")
     void test_6() {
         // Arrange
-        Item[] items = new Item[] { new Item("Aged Brie", 10, 50) };
+        Item[] items = new Item[] {
+                new Item("Aged Brie", 10, 50),
+                new Item("Backstage pass", 10, 50),
+                new Item("Backstage pass", 5, 50)
+        };
         GildedRose app = new GildedRose(items);
 
         // Act
@@ -88,6 +92,8 @@ class GildedRoseTest {
 
         // Assert
         assertThat(app.items[0].quality).isEqualTo(50);
+        assertThat(app.items[1].quality).isEqualTo(50);
+        assertThat(app.items[2].quality).isEqualTo(50);
     }
 
     @Test
