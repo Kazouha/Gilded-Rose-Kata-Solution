@@ -105,8 +105,22 @@ class GildedRoseTest {
     }
 
     @Test
-    @DisplayName("Quality of Backstage Passes increases by 2 if SellIn value is 10 or less")
+    @DisplayName("SellIn value of Sulfaras never changes")
     void test_8() {
+        // Arrange
+        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 3, 80) };
+        GildedRose app = new GildedRose(items);
+
+        // Act
+        app.updateQuality();
+
+        // Assert
+        assertThat(app.items[0].sellIn).isEqualTo(3);
+    }
+
+    @Test
+    @DisplayName("Quality of Backstage Passes increases by 2 if SellIn value is 10 or less")
+    void test_9() {
         // Arrange
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20) };
         GildedRose app = new GildedRose(items);
@@ -120,7 +134,7 @@ class GildedRoseTest {
 
     @Test
     @DisplayName("Quality of Backstage Passes increases by 3 if SellIn value is 5 or less")
-    void test_9() {
+    void test_10() {
         // Arrange
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 5, 20) };
         GildedRose app = new GildedRose(items);
@@ -134,7 +148,7 @@ class GildedRoseTest {
 
     @Test
     @DisplayName("Quality of Backstage Passes drops to 0 after SellIn value is passed")
-    void test_10() {
+    void test_11() {
         // Arrange
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 0, 20) };
         GildedRose app = new GildedRose(items);
