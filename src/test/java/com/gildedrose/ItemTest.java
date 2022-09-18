@@ -1,9 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.items.BackstagePass;
-import com.gildedrose.items.Brie;
-import com.gildedrose.items.Item;
-import com.gildedrose.items.Normal;
+import com.gildedrose.items.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -156,6 +153,33 @@ class ItemTest {
             assertThat(backstagePass1.getQuality()).isEqualTo(50);
             assertThat(backstagePass2.getQuality()).isEqualTo(50);
             assertThat(backstagePass3.getQuality()).isEqualTo(50);
+        }
+    }
+
+    @Nested
+    class LegendaryTest {
+
+        @Test
+        @DisplayName("Quality of Legendary items is always initialized with 80")
+        void test_1() {
+            // Arrange
+            Item legendary = new Legendary("Sulfuras, Hand of Ragnaros", 5, 30);
+
+            // Assert
+            assertThat(legendary.getQuality()).isEqualTo(80);
+        }
+
+        @Test
+        @DisplayName("Quality of Legendary items cannot be changed")
+        void test_2() {
+            // Arrange
+            Item legendary = new Legendary("Sulfuras, Hand of Ragnaros", 5, 30);
+
+            // Act
+            legendary.update();
+
+            // Assert
+            assertThat(legendary.getQuality()).isEqualTo(80);
         }
     }
 
